@@ -1,0 +1,2341 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Siddhant Malakar | Project Coordinator | Digital Marketing</title>
+
+<meta name="description" content="Siddhant Malakar - Entry-level Project Coordinator, Digital Marketer & Business Analyst. Skilled in project management, SEO, and web development.">
+
+<meta name="keywords" content="Siddhant Malakar, Project Coordinator, Digital Marketing, Business Analyst, Portfolio">
+
+<meta name="author" content="Siddhant Malakar">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- <link rel="icon" type="image/x-icon" href="https://hpanel.hostinger.com/favicons/hostinger.png"> -->
+        <meta charset="utf-8">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta content="Default page" name="description">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet"> -->
+       <style>
+       /* ============================
+   Siddhant Developer One-Page
+   Beginner notes:
+   - Variables (:root) store colors and sizes so changes are easy.
+   - "ratio" wrappers reserve image space to avoid layout collapse.
+   - Hover effects are handled with transform + shadow + subtle glow.
+============================ */
+
+:root {
+  --bg: #050509;
+  --bg2: #0b0b12;
+  --card: rgba(255, 255, 255, 0.06);
+  --card2: rgba(255, 255, 255, 0.085);
+  --border: rgba(255, 255, 255, 0.12);
+
+  --text: rgba(245, 245, 247, 0.88);
+  --muted: rgba(245, 245, 247, 0.62);
+  --heading: rgba(245, 245, 247, 0.98);
+
+  --accent: #2dd4bf;   /* teal */
+  --accent2: #34d399;  /* green */
+  --warn: #f97316;     /* orange */
+
+  --shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+  --shadow2: 0 14px 35px rgba(0, 0, 0, 0.45);
+
+  --radius: 18px;
+  --radius2: 24px;
+
+  --max: 1120px;
+  --pad: 18px;
+
+  --ease: cubic-bezier(.2, .8, .2, 1);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: radial-gradient(1200px 600px at 20% 10%, rgba(45, 212, 191, 0.12), transparent 60%),
+              radial-gradient(900px 500px at 85% 20%, rgba(52, 211, 153, 0.10), transparent 55%),
+              radial-gradient(1000px 600px at 50% 95%, rgba(249, 115, 22, 0.10), transparent 60%),
+              var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; }
+
+.container {
+  width: min(var(--max), calc(100% - 2 * var(--pad)));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 88px 0;
+  position: relative;
+}
+
+.sectionHead h2 {
+  margin: 0 0 10px;
+  font-size: clamp(26px, 3vw, 38px);
+  color: var(--heading);
+  letter-spacing: -0.02em;
+}
+
+.sectionHead p {
+  margin: 0;
+  max-width: 64ch;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ===== Background orbs ===== */
+.bgOrbs {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.9;
+  filter: blur(0.2px);
+}
+
+.orb {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, rgba(45, 212, 191, 0.25), transparent 60%);
+  transform: translateZ(0);
+  animation: floaty 12s var(--ease) infinite;
+}
+
+.orb.o1 { left: -120px; top: 120px; }
+.orb.o2 {
+  right: -140px; top: 220px;
+  width: 520px; height: 520px;
+  background: radial-gradient(circle at 30% 30%, rgba(52, 211, 153, 0.20), transparent 60%);
+  animation-duration: 14s;
+}
+.orb.o3 {
+  left: 30%; bottom: -250px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle at 30% 30%, rgba(249, 115, 22, 0.18), transparent 60%);
+  animation-duration: 16s;
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(0, -18px, 0) scale(1.03); }
+}
+
+/* ===== Header ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  background: linear-gradient(to bottom, rgba(5,5,9,0.85), rgba(5,5,9,0.55));
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.headerRow {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+}
+
+.brandMark {
+  width: 44px; height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(45,212,191,0.18), rgba(52,211,153,0.12));
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--heading);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: transform 250ms var(--ease);
+}
+.brand:hover .brandMark { transform: translateY(-2px) rotate(-2deg); }
+
+.brandText { display: grid; line-height: 1.1; }
+.brandText strong { color: var(--heading); font-size: 14px; }
+.brandText em { font-style: normal; color: var(--muted); font-size: 12px; }
+
+.nav { position: relative; }
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navLink {
+  padding: 10px 12px;
+  border-radius: 999px;
+  color: var(--muted);
+  border: 1px solid transparent;
+  transition: background 200ms var(--ease), transform 200ms var(--ease), color 200ms var(--ease), border-color 200ms var(--ease);
+}
+.navLink:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.06);
+  color: var(--heading);
+  border-color: rgba(255,255,255,0.10);
+}
+.navLink.isActive {
+  background: rgba(45,212,191,0.12);
+  border-color: rgba(45,212,191,0.25);
+  color: var(--heading);
+}
+
+.headerCtas { display: flex; gap: 10px; }
+
+/* Mobile menu button */
+.navToggle {
+  display: none;
+  width: 44px; height: 44px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  cursor: pointer;
+  transition: transform 200ms var(--ease), background 200ms var(--ease);
+}
+.navToggle:hover { transform: translateY(-1px); background: rgba(255,255,255,0.07); }
+.navToggle span {
+  display: block;
+  width: 18px; height: 2px;
+  margin: 4px auto;
+  background: rgba(245,245,247,0.85);
+  border-radius: 2px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+  color: var(--heading);
+  cursor: pointer;
+  transition: transform 220ms var(--ease), box-shadow 220ms var(--ease), background 220ms var(--ease), border-color 220ms var(--ease);
+  user-select: none;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow2); }
+.btn:active { transform: translateY(0px) scale(0.99); }
+
+.btnPrimary {
+  background: linear-gradient(135deg, rgba(45,212,191,0.95), rgba(52,211,153,0.85));
+  border-color: rgba(45,212,191,0.35);
+  color: #041012;
+}
+.btnPrimary:hover { box-shadow: 0 18px 45px rgba(45,212,191,0.16); }
+
+.btnGhost {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.12);
+  color: var(--heading);
+}
+
+.btnBig { padding: 13px 18px; }
+
+.chev {
+  width: 10px; height: 10px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  margin-left: 2px;
+}
+
+/* ===== Hero ===== */
+.hero { padding-top: 78px; }
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 26px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+.badge .dot {
+  width: 8px; height: 8px;
+  border-radius: 99px;
+  background: var(--accent2);
+  box-shadow: 0 0 0 6px rgba(52,211,153,0.10);
+  animation: pulse 1.8s var(--ease) infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.heroTitle {
+  margin: 0 0 12px;
+  font-size: clamp(34px, 4vw, 54px);
+  color: var(--heading);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+.heroTitle .accent {
+  background: linear-gradient(135deg, rgba(45,212,191,1), rgba(52,211,153,1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.heroSub {
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 62ch;
+}
+
+.heroStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0 22px;
+}
+
+.statCard {
+  padding: 14px 14px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.20);
+  transition: transform 220ms var(--ease), border-color 220ms var(--ease);
+}
+.statCard:hover { transform: translateY(-3px); border-color: rgba(45,212,191,0.28); }
+.statCard strong { display: block; color: var(--heading); font-size: 18px; }
+.statCard span { color: var(--muted); font-size: 12px; }
+
+.heroActions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.chip {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  color: rgba(245,245,247,0.78);
+  transition: transform 220ms var(--ease), background 220ms var(--ease);
+}
+.chip:hover { transform: translateY(-2px); background: rgba(255,255,255,0.06); }
+
+.heroMedia { position: relative; }
+
+.mediaFrame {
+  border-radius: var(--radius2);
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.mediaFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  transition: transform 600ms var(--ease), filter 600ms var(--ease);
+}
+.mediaFrame:hover img { transform: scale(1.07); filter: saturate(1.1); }
+
+.mediaFallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 18px;
+  color: rgba(245,245,247,0.70);
+  background: radial-gradient(800px 300px at 20% 10%, rgba(45,212,191,0.12), transparent 60%),
+              radial-gradient(700px 260px at 80% 20%, rgba(249,115,22,0.10), transparent 55%),
+              rgba(255,255,255,0.03);
+  opacity: 0;
+  pointer-events: none;
+}
+.mediaFrame.isMissing .mediaFallback { opacity: 1; }
+.mediaFrame.isMissing img { display: none; }
+
+.fallbackIcon {
+  width: 58px; height: 58px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+  margin: 0 auto 10px;
+  font-size: 22px;
+}
+
+/* Fixed ratios: layout stays stable even without images */
+.ratio { position: relative; width: 100%; }
+.ratio::before {
+  content: "";
+  display: block;
+  width: 100%;
+}
+.ratioHero::before { padding-top: 120%; }   /* tall hero image */
+.ratioCard::before { padding-top: 64%; }    /* project card cover */
+.ratioAbout::before { padding-top: 76%; }   /* about image */
+
+.ratio > img,
+.ratio > .mediaFallback,
+.ratio > .pGlow {
+  position: absolute;
+  inset: 0;
+}
+
+.floatingCard {
+  position: absolute;
+  right: -16px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(5,5,9,0.62);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+  transition: transform 300ms var(--ease);
+}
+.floatingCard strong { display: block; color: var(--heading); font-size: 13px; }
+.floatingCard span { display: block; color: var(--muted); font-size: 12px; margin-top: 3px; }
+.fc1 { top: 22px; }
+.fc2 { bottom: 22px; right: 8px; }
+.heroMedia:hover .floatingCard { transform: translateY(-3px); }
+
+.heroBottom { margin-top: 34px; }
+
+.scrollHint {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(245,245,247,0.55);
+}
+.mouse {
+  width: 22px;
+  height: 34px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.18);
+  position: relative;
+}
+.mouse::after {
+  content: "";
+  width: 4px; height: 6px;
+  border-radius: 99px;
+  background: rgba(245,245,247,0.65);
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  transform: translateX(-50%);
+  animation: scrollDot 1.4s var(--ease) infinite;
+}
+@keyframes scrollDot {
+  0%, 100% { transform: translate(-50%, 0); opacity: 0.7; }
+  50% { transform: translate(-50%, 10px); opacity: 1; }
+}
+
+/* ===== Cards / grids ===== */
+.cardsGrid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.card {
+  border-radius: var(--radius2);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  padding: 18px;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.28);
+}
+.cardIcon { font-size: 22px; }
+.card h3 { margin: 10px 0 8px; color: var(--heading); letter-spacing: -0.01em; }
+.card p { margin: 0; color: var(--muted); line-height: 1.65; }
+
+.miniList {
+  margin: 14px 0 0;
+  padding-left: 18px;
+  color: rgba(245,245,247,0.70);
+}
+.miniList li { margin: 6px 0; }
+
+.strip {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: var(--radius2);
+  background: linear-gradient(135deg, rgba(45,212,191,0.10), rgba(255,255,255,0.04));
+  border: 1px solid rgba(255,255,255,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.stripLeft strong { color: var(--heading); display: block; }
+.stripLeft span { color: var(--muted); }
+
+/* ===== Projects ===== */
+.toolbar {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.segmented {
+  display: inline-flex;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  padding: 6px;
+  gap: 6px;
+}
+
+.segBtn {
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: transform 200ms var(--ease), background 200ms var(--ease), color 200ms var(--ease), border-color 200ms var(--ease);
+}
+.segBtn:hover { transform: translateY(-1px); background: rgba(255,255,255,0.06); color: var(--heading); }
+.segBtn.isOn {
+  background: rgba(45,212,191,0.14);
+  border-color: rgba(45,212,191,0.22);
+  color: var(--heading);
+}
+
+.searchBox {
+  position: relative;
+  min-width: min(340px, 100%);
+}
+.searchBox input {
+  width: 100%;
+  padding: 12px 40px 12px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  color: var(--heading);
+  outline: none;
+  transition: border-color 220ms var(--ease), box-shadow 220ms var(--ease);
+}
+.searchBox input:focus {
+  border-color: rgba(45,212,191,0.35);
+  box-shadow: 0 0 0 5px rgba(45,212,191,0.10);
+}
+.searchIcon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(245,245,247,0.55);
+}
+
+.projectsGrid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pCard {
+  border-radius: var(--radius2);
+  background: rgba(255,255,255,0.045);
+  border: 1px solid rgba(255,255,255,0.10);
+  overflow: hidden;
+  box-shadow: 0 16px 45px rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.pMedia {
+  position: relative;
+  background: rgba(255,255,255,0.03);
+  overflow: hidden;
+}
+.pMedia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.05);
+  transition: transform 650ms var(--ease), filter 650ms var(--ease);
+}
+.pCard:hover .pMedia img { transform: scale(1.12); filter: saturate(1.12); }
+
+.pGlow {
+  pointer-events: none;
+  background: radial-gradient(450px 220px at 20% 10%, rgba(45,212,191,0.22), transparent 60%);
+  opacity: 0;
+  transition: opacity 500ms var(--ease);
+}
+.pCard:hover .pGlow { opacity: 1; }
+
+.pBody {
+  padding: 14px 14px 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.pTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.pTop h3 {
+  margin: 0;
+  color: var(--heading);
+  font-size: 16px;
+  letter-spacing: -0.01em;
+}
+.pill {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: rgba(245,245,247,0.78);
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+}
+
+.pBody p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 13px;
+}
+
+.pMeta { display: flex; gap: 8px; flex-wrap: wrap; }
+.tag {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  color: rgba(245,245,247,0.72);
+}
+
+.pBtn {
+  margin-top: 4px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+  color: var(--heading);
+  border-radius: 14px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: transform 220ms var(--ease), box-shadow 220ms var(--ease), border-color 220ms var(--ease);
+}
+.pBtn:hover { transform: translateY(-2px); box-shadow: 0 14px 35px rgba(0,0,0,0.35); border-color: rgba(45,212,191,0.25); }
+
+.pMedia.isMissing img { display: none; }
+.pMedia.isMissing .mediaFallback { opacity: 1; }
+
+/* Empty state */
+.emptyState {
+  margin-top: 18px;
+  border-radius: var(--radius2);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
+  padding: 22px;
+  text-align: center;
+}
+.emptyIcon { font-size: 28px; margin-bottom: 6px; }
+.emptyState strong { color: var(--heading); display: block; margin-bottom: 6px; }
+.emptyState p { color: var(--muted); margin: 0; }
+
+/* ===== Testimonials ===== */
+.tGrid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.tCard {
+  border-radius: var(--radius2);
+  background: rgba(255,255,255,0.045);
+  border: 1px solid rgba(255,255,255,0.10);
+  padding: 18px;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.28);
+}
+.tCard p { margin: 0; color: rgba(245,245,247,0.78); line-height: 1.7; }
+.tFoot {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.avatar {
+  width: 36px; height: 36px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+  color: var(--heading);
+  font-weight: 800;
+}
+.tFoot strong { color: var(--heading); display: block; font-size: 13px; }
+.tFoot span { color: var(--muted); font-size: 12px; }
+
+/* ===== About ===== */
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.aboutPoints {
+  margin-top: 16px;
+  display: grid;
+  gap: 12px;
+}
+.point {
+  padding: 14px;
+  border-radius: var(--radius2);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+.point strong { color: var(--heading); display: block; }
+.point span { color: var(--muted); display: block; margin-top: 6px; }
+
+.skillBars { margin-top: 14px; display: grid; gap: 12px; }
+.skillRow { display: flex; align-items: center; justify-content: space-between; }
+.skillRow strong { color: var(--heading); font-size: 13px; }
+.skillRow span { color: var(--muted); font-size: 12px; }
+.bar {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  overflow: hidden;
+  margin-top: 8px;
+}
+.bar span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(45,212,191,0.95), rgba(52,211,153,0.85));
+}
+
+/* ===== Contact ===== */
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.infoCards { margin-top: 16px; display: grid; gap: 12px; }
+.infoCard {
+  padding: 14px;
+  border-radius: var(--radius2);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+.infoCard strong { color: var(--heading); display: block; }
+.infoCard span { color: var(--muted); display: block; margin-top: 6px; }
+
+.form {
+  padding: 16px;
+  border-radius: var(--radius2);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 16px 45px rgba(0,0,0,0.30);
+}
+.form label { display: grid; gap: 8px; margin-bottom: 12px; }
+.form span { color: rgba(245,245,247,0.75); font-size: 13px; }
+
+.form input,
+.form select,
+.form textarea {
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  color: var(--heading);
+  outline: none;
+  transition: border-color 220ms var(--ease), box-shadow 220ms var(--ease), transform 220ms var(--ease);
+}
+.form textarea { resize: vertical; min-height: 120px; }
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  border-color: rgba(45,212,191,0.35);
+  box-shadow: 0 0 0 5px rgba(45,212,191,0.10);
+}
+.form input:hover,
+.form select:hover,
+.form textarea:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.16);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.formNote {
+  margin: 10px 0 0;
+  color: rgba(245,245,247,0.72);
+  min-height: 20px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  padding: 26px 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  background: rgba(5,5,9,0.55);
+  backdrop-filter: blur(10px);
+}
+.footerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.footer p { margin: 0; color: rgba(245,245,247,0.62); }
+.footerLinks { display: flex; gap: 14px; }
+.footerLinks a {
+  color: rgba(245,245,247,0.62);
+  transition: color 200ms var(--ease), transform 200ms var(--ease);
+}
+.footerLinks a:hover { color: var(--heading); transform: translateY(-1px); }
+
+/* ===== Modal ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  place-items: center;
+  z-index: 100;
+  padding: 18px;
+}
+.modal.isOpen { display: grid; }
+
+.modalOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(6px);
+}
+
+.modalCard {
+  width: min(520px, 100%);
+  position: relative;
+  border-radius: var(--radius2);
+  background: rgba(8,8,14,0.92);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: transform 260ms var(--ease), opacity 260ms var(--ease);
+}
+.modal.isOpen .modalCard { transform: translateY(0px); opacity: 1; }
+
+.modalClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 42px; height: 42px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+  color: var(--heading);
+  cursor: pointer;
+  transition: transform 200ms var(--ease);
+}
+.modalClose:hover { transform: translateY(-1px); }
+
+.modalCard h3 { margin: 0 0 10px; color: var(--heading); }
+.modalText { margin: 0 0 14px; color: rgba(245,245,247,0.72); line-height: 1.65; }
+.modalActions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* ===== Go Top Button ===== */
+.goTop {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: var(--heading);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+  transform: translateY(18px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 220ms var(--ease), opacity 220ms var(--ease), background 220ms var(--ease);
+  z-index: 60;
+}
+.goTop:hover { transform: translateY(-2px); background: rgba(255,255,255,0.09); }
+.goTop.isVisible {
+  opacity: 1;
+  transform: translateY(0px);
+  pointer-events: auto;
+}
+
+/* ===== Scroll reveal animation ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 650ms var(--ease), transform 650ms var(--ease);
+}
+.reveal.isIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* General hover lift helper */
+.lift { transition: transform 220ms var(--ease), box-shadow 220ms var(--ease), border-color 220ms var(--ease); }
+.lift:hover { transform: translateY(-4px); border-color: rgba(45,212,191,0.20); box-shadow: 0 18px 48px rgba(0,0,0,0.42); }
+
+/* ===== Responsive ===== */
+@media (max-width: 1050px) {
+  .projectsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 900px) {
+  .heroGrid { grid-template-columns: 1fr; }
+  .headerRow { grid-template-columns: 1fr auto; }
+  .headerCtas { display: none; }
+  .cardsGrid { grid-template-columns: 1fr; }
+  .tGrid { grid-template-columns: 1fr; }
+  .aboutGrid { grid-template-columns: 1fr; }
+  .contactGrid { grid-template-columns: 1fr; }
+  .row { grid-template-columns: 1fr; }
+
+  .navToggle { display: inline-grid; place-items: center; }
+  .navLinks {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding: 10px;
+    width: min(240px, 88vw);
+    border-radius: 18px;
+    background: rgba(8,8,14,0.92);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: var(--shadow);
+    transform: translateY(-6px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms var(--ease), transform 220ms var(--ease);
+  }
+  .navLinks.isOpen {
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .heroStats { grid-template-columns: 1fr; }
+}
+
+/* timeline */
+
+
+
+.timeline {
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #38bdf8, #a78bfa);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 60px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+.timeline-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-icon {
+  width: 50px;
+  height: 50px;
+  background: #1e293b;
+  border: 3px solid #38bdf8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: #38bdf8;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  width: 40%;
+  position: relative;
+}
+
+.timeline-content h3 {
+  margin-bottom: 8px;
+  color: #fbbf24;
+}
+
+.timeline-content p{
+  line-height:1.5;
+}
+
+.timeline-content .date {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  display: block;
+  margin-bottom: 20px;
+  
+}
+
+/* Alternate positioning */
+.timeline-item:nth-child(odd) .timeline-content {
+  right: -55%;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  left: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 30px;
+  }
+  .timeline-icon {
+    left: 0;
+    transform: translateX(0);
+  }
+  .timeline-content {
+    width: calc(100% - 80px);
+    left: 75px !important;
+  }
+}
+
+
+/* certificater  */
+
+
+.certifications {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.certifications h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.cert-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.cert-card {
+  background: #111827;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.cert-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,255,200,0.15);
+}
+
+.cert-card img {
+  width: 100%;
+  height: 180px;
+  object-position: center 1px;
+  object-fit: cover;
+}
+
+.cert-content {
+  padding: 15px;
+  text-align: left;
+}
+
+.cert-content h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.cert-content p {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.tags span {
+  display: inline-block;
+  background: #1f2937;
+  padding: 4px 10px;
+  margin: 4px 4px 0 0;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media(max-width: 600px) {
+  .cert-card img {
+    height: 150px;
+  }
+}
+
+       </style>
+    </head>
+    <body>
+
+<div class="page" id="top">
+  <!-- Background decorations (purely visual) -->
+  <div class="bgOrbs" aria-hidden="true">
+    <span class="orb o1"></span>
+    <span class="orb o2"></span>
+    <span class="orb o3"></span>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="header" id="header">
+    <div class="container headerRow">
+      <a class="brand" href="#home" aria-label="Go to Home">
+        <span class="brandMark">SM</span>
+        <span class="brandText">
+          <strong>Siddhant Malakar</strong>
+          <em>Project Coordinator • Agile & Scrum</em>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="navToggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <div class="navLinks" id="navLinks">
+          <a href="#home" class="navLink isActive">Home</a>
+          <a href="#services" class="navLink">Services</a>
+          <a href="#projects" class="navLink">Projects</a>
+          <a href="#testimonials" class="navLink">Testimonials</a>
+          <a href="#about" class="navLink">About</a>
+          <a href="#contact" class="navLink">Contact</a>
+        </div>
+      </nav>
+
+      <div class="headerCtas">
+        <a class="btn btnGhost" href="#projects">View Work</a>
+        <a class="btn btnPrimary" href="#contact">Hire Me</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero section" id="home">
+      <div class="container heroGrid">
+        <div class="heroLeft reveal">
+          <div class="badge">
+            <span class="dot"></span>
+            Available for Siddhant • 2025
+          </div>
+
+          <h1 class="heroTitle">
+            I manage <span class="accent">structured</span>, <span class="accent">efficient</span> and
+            <span class="accent">successful</span> Project deliveries.
+          </h1>
+
+          <p class="heroSub">
+            Coordinating teams, managing timelines, and ensuring smooth execution —
+with a focus on Agile practices, stakeholder communication, and on-time delivery.
+          </p>
+
+          <div class="heroStats">
+            <div class="statCard">
+              <strong>3+ yrs</strong>
+              <span>Project Coordination Experience  </span>
+            </div>
+            <div class="statCard">
+              <strong>8+</strong>
+              <span>Successfully Managed </span>
+            </div>
+            <div class="statCard">
+              <strong>On Time</strong>
+              <span>Delivery Focus </span>
+            </div>
+          </div>
+
+          <div class="heroActions">
+            <a class="btn btnPrimary btnBig" href="#contact">
+              <span>Let’s Talk</span>
+              <i class="chev" aria-hidden="true"></i>
+            </a>
+            <a class="btn btnGhost btnBig" href="#projects">
+              <span>See Projects</span>
+              <i class="spark" aria-hidden="true">✦</i>
+            </a>
+          </div>
+
+          <div class="chips">
+            <span class="chip">Agile</span>
+            <span class="chip">Scrum</span>
+            <span class="chip">Jira</span>
+            <span class="chip">SDLC</span>
+            <span class="chip">Stakeholder Management</span>
+          </div>
+        </div>
+
+        <div class="heroRight reveal">
+          <div class="heroMedia">
+            <!-- Image wrapper keeps its space even if image fails -->
+            <div class="mediaFrame ratio ratioHero">
+              <img
+                src="https://cdn.dribbble.com/userupload/47166449/file/33090c54c0796237a0f65b022a157d2b.png?resize=1024x1536&vertical=center"
+                alt="Siddhant Malakar Project Coordinator"
+                
+                loading="lazy"
+                onerror="this.closest('.mediaFrame').classList.add('isMissing')"
+              /> 
+               <!-- <img
+                src="https://images.peopleimages.com/picture/202208/2498898-corporate-business-and-manager-writing-on-glass-board-while-planning-project-with-group.-creative-team-leader-doing-strategy-research-and-marketing-presentation-in-meeting-in-office-conference-room-fit_400_400.jpg"
+                alt="Developer workspace"
+                loading="lazy"
+                onerror="this.closest('.mediaFrame').classList.add('isMissing')"
+              /> -->
+              <div class="mediaFallback">
+                <div class="fallbackIcon" aria-hidden="true">⌁</div>
+                <p>Preview image</p>
+              </div>
+            </div>
+
+            <div class="floatingCard fc1">
+              <strong>Performance first</strong>
+              <span>Lighthouse-friendly builds</span>
+            </div>
+
+            <div class="floatingCard fc2">
+              <strong>Polished UX</strong>
+              <span>Micro-interactions & layout craft</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container heroBottom">
+        <div class="scrollHint">
+          <span class="mouse" aria-hidden="true"></span>
+          <span>Scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <h2>Core Capabilities</h2>
+          <p>Key areas where I contribute to successful project execution and delivery.</p>
+        </div>
+
+        <div class="cardsGrid">
+          <article class="card reveal lift">
+            <div class="cardIcon" aria-hidden="true">⚡</div>
+            <h3>Project Coordination</h3>
+            <p>
+              Managing tasks, timelines, and communication across teams to ensure smooth project execution.
+            </p>
+            <ul class="miniList">
+              <li>Requirement Gathering </li>
+              <li>Task Tracking  </li>
+              <li>Client Coordination </li>
+              <li>Timeline Monitoring   </li>
+            </ul>
+          </article>
+
+          <article class="card reveal lift">
+            <div class="cardIcon" aria-hidden="true">🧩</div>
+            <h3>Agile & Scrum Execution</h3>
+            <p>
+              Supporting Agile workflows and ensuring efficient sprint planning and execution.  
+            </p>
+            <ul class="miniList">
+              <li>Sprint Planning</li>
+              <li>Backlog Management</li>
+              <li>Daily Standups  </li>
+              <li>Jira Tracking    </li>
+            </ul>
+          </article>
+
+          <article class="card reveal lift">
+            <div class="cardIcon" aria-hidden="true">🔌</div>
+            <h3>Stakeholder Communication</h3>
+            <p>
+              Ensuring clear communication between clients and teams for aligned project delivery.
+            </p>
+            <ul class="miniList">
+              <li>Status Reporting  </li>
+              <li> Follow-ups  </li>
+              <li>Risk Communication  </li>
+              <li> Expectation Management  </li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="strip reveal">
+          <div class="stripLeft">
+            <strong>Looking for a Project Coordinator?</strong>
+            <span>I’m actively looking for entry-level Project Coordinator / Scrum roles.<br>
+Let’s connect and build impactful projects together.</span>
+          </div>
+          <a class="btn btnPrimary" href="javascript:void(0)" onclick="openModal('resume')">
+  Check Resume
+</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Certifications -->
+    <section class="certifications">
+  <h2>🎓 Certifications</h2>
+
+  <div class=" container cert-container">
+
+    <!-- Card 1 -->
+    <div class="cert-card" onclick="openModal('cert1')">
+      <img src="https://cdn.dribbble.com/userupload/47162026/file/e6bfd8e42570a7e51a1ec810082ef68e.jpg?resize=1504x1162&vertical=center" alt="Certificate">
+      <div class="cert-content">
+        <h3>Atlassian Agile Project Management</h3>
+        <p>Atlassian | 2025</p>
+        <div class="tags">
+          <span>Jira</span>
+          <span>Practical Use</span>
+          <span>Agile Methodologies </span>
+          <span>Agile Project Management</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="cert-card" onclick="openModal('cert2')">
+      <img src="https://cdn.dribbble.com/userupload/47162080/file/0d10547b2ccbc8daed9221280ec54806.jpg?resize=1504x1162&vertical=center" alt="Certificate">
+      <div class="cert-content">
+        <h3>Agile Development and Scrum</h3>
+        <p>IBM | 2026</p>
+        <div class="tags">
+          <span>User Story</span>
+          <span>Sprint Planning</span>
+          <span>Backlogs</span>
+          <span>Sprint Retrospectives</span>
+          <span>Kanban Principles</span>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="cert-card" onclick="openModal('cert3')">
+      <img src=https://cdn.dribbble.com/userupload/47162086/file/fe926ec6e03a758019f25ed4cd22bd18.jpg?resize=1600x1236&vertical=center" alt="Certificate">
+      <div class="cert-content">
+        <h3>Prompt Writing </h3>
+        <p>Google | 2026</p>
+        <div class="tags">
+          <span>Context Management</span>
+          <span>Responsible AI</span>
+          <span>Prompt Engineering</span>
+          <span>Multimodal Prompts</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="cert-card" onclick="openModal('cert4')">
+      <img src="https://cdn.dribbble.com/userupload/47162070/file/07dccfb99fcbfb524dcf49aa7bb1b9b7.jpg?resize=1504x1162&vertical=center" alt="Certificate">
+      <div class="cert-content">
+        <h3>Six Sigma Principles</h3>
+        <p>kennesaw state university | 2026</p>
+        <div class="tags">
+          <span>Business Process</span>
+          <span>Team Management</span>
+          <span>Root Cause Analysis</span>
+          <span>Quality Improvement</span>
+        </div>
+      </div>
+    </div>
+    <!-- Card 5 -->
+    <div class="cert-card" onclick="openModal('cert5')">
+      <img src="https://cdn.dribbble.com/userupload/47162092/file/7306c52ec8ceaff5a71422ec463154db.jpg?resize=1504x1162&vertical=center" alt="Certificate">
+      <div class="cert-content">
+        <h3>Sales and CRM Overview</h3>
+        <p>Salesforce | 2026</p>
+        <div class="tags">
+          <span>Business-To-Consumer</span>
+          <span>B2B Sales</span>  
+          <span>Sales Process</span>
+          <span>Sales Operations</span>
+          <span>Customer Management</span>
+        </div>
+      </div>
+    </div>
+    <!-- Card 6 -->
+    <div class="cert-card" onclick="openModal('cert6')">
+      <img src="https://cdn.dribbble.com/userupload/47165757/file/57beb694e2ae0a514eb896c2502cf1b8.png?resize=400x306&vertical=center" alt="Certificate">
+      <div class="cert-content">
+        <h3>PMP Exam Prep</h3>
+        <p>Technical Institute of America | 2026</p>
+        <div class="tags">
+          <span>Agile & Hybrid Methodologies</span>
+          <span>10 knowledge areas</span>
+          <span> project management</span>
+          <span>Predictive Managementt</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="certModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <h2>Project Experience</h2>
+          <p>Real projects where I contributed through coordination, planning, and execution.</p>
+        </div>
+
+        <div class="toolbar reveal">
+          <div class="segmented" role="tablist" aria-label="Project filters">
+            <button class="segBtn isOn" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="segBtn" data-filter="landing" role="tab" aria-selected="false">Landing</button>
+            <button class="segBtn" data-filter="dashboard" role="tab" aria-selected="false">Dashboard</button>
+            <button class="segBtn" data-filter="ecommerce" role="tab" aria-selected="false">E-commerce</button>
+          </div>
+
+          <div class="searchBox">
+            <input id="projectSearch" type="text" placeholder="Search projects..." autocomplete="off" />
+            <span class="searchIcon" aria-hidden="true">⌕</span>
+          </div>
+        </div>
+
+        <div class="projectsGrid" id="projectsGrid">
+          <!-- Project Card 1 -->
+          <article class="pCard reveal lift" data-tags="landing ui performance" data-type="landing">
+            <div class="pMedia ratio ratioCard">
+              <img
+                src="https://www.sikhtours.in/admin/uploads/North-India-Temple-Tour-Package.jpg"
+                alt="Landing page concept"
+                loading="lazy"
+                onerror="this.closest('.pMedia').classList.add('isMissing')"
+              />
+              <div class="mediaFallback">
+                <div class="fallbackIcon" aria-hidden="true">⌁</div>
+                <p>Project cover</p>
+              </div>
+              <div class="pGlow" aria-hidden="true"></div>
+            </div>
+            <div class="pBody">
+              <div class="pTop">
+                <h3>Mahakal Darshan Tour Planner</h3>
+                <span class="pill">Project Coordination</span>
+              </div>
+              <p>Coordinated development of a tour planning platform for Ujjain visitors. <br>
+
+• Problem: Complex travel planning  <br>
+• Action: Managed client + developer coordination<br>  
+• Result: Smooth and structured booking experience  </p>
+              <div class="pMeta">
+                <span class="tag">Agile</span>
+                <span class="tag">Coordination</span>
+                <span class="tag">Client Handling</span>
+              </div>
+              <button class="pBtn" data-open="modal" data-title="Consulting Landing">
+                View Details <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="pCard reveal lift" data-tags="dashboard charts table" data-type="dashboard">
+            <div class="pMedia ratio ratioCard">
+              <img
+                src="https://www.slideteam.net/media/catalog/product/cache/1280x720/r/e/real_estate_property_management_dashboard_with_leasing_status_slide01.jpg"
+                alt="Dashboard analytics"
+                loading="lazy"
+                onerror="this.closest('.pMedia').classList.add('isMissing')"
+              />
+              <div class="mediaFallback">
+                <div class="fallbackIcon" aria-hidden="true">⌁</div>
+                <p>Om Residency Property Platform</p>
+              </div>
+              <div class="pGlow" aria-hidden="true"></div>
+            </div>
+            <div class="pBody">
+              <div class="pTop">
+                <h3>Om Residency Property Platform</h3>
+                <span class="pill">Web Project</span>
+              </div>
+              <p>Managed development of a property listing website. <br>
+
+• Problem: Unstructured property search  <br>
+• Action: Defined user flow and tracked development<br>  
+• Result: Improved inquiries and usability  </p>
+              <div class="pMeta">
+                <span class="tag">SDLC</span>
+                <span class="tag">Planning</span>
+                <span class="tag">Communication</span>
+              </div>
+              <button class="pBtn" data-open="modal" data-title="Admin Dashboard">
+                View Details <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="pCard reveal lift" data-tags="ecommerce cart product" data-type="ecommerce">
+            <div class="pMedia ratio ratioCard">
+              <img
+                src="https://framerusercontent.com/images/uG3tvHQ46l8FVW8II2PPTvXKMc.webp?height=1042&width=2125"
+                alt="E-commerce product UI"
+                loading="lazy"
+                onerror="this.closest('.pMedia').classList.add('isMissing')"
+              />
+              <div class="mediaFallback">
+                <div class="fallbackIcon" aria-hidden="true">⌁</div>
+                <p>Project cover</p>
+              </div>
+              <div class="pGlow" aria-hidden="true"></div>
+            </div>
+            <div class="pBody">
+              <div class="pTop">
+                <h3>AI Documentation Generator</h3>
+                <span class="pill">Automation Project</span>
+              </div>
+              <p>Built a tool to automate project documentation.<br>
+
+• Problem: Manual documentation delay  <br>
+• Action: Developed structured automation  <br>
+• Result: Faster workflow and efficiency  
+</p>
+              <div class="pMeta">
+                <span class="tag">Automation</span>
+                <span class="tag">Workflow</span>
+                <span class="tag">Efficiency</span>
+              </div>
+              <button class="pBtn" data-open="modal" data-title="Shop Mini">
+                View Details <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project Card 4 -->
+          <article class="pCard reveal lift" data-tags="landing branding motion" data-type="landing">
+            <div class="pMedia ratio ratioCard">
+              <img
+                src="https://cdn.dribbble.com/userupload/45105594/file/cefd7c970cfef56208cc3327ebcc9d7b.png?resize=1600x1200"
+                alt="Team collaboration"
+                loading="lazy"
+                onerror="this.closest('.pMedia').classList.add('isMissing')"
+              />
+              <div class="mediaFallback">
+                <div class="fallbackIcon" aria-hidden="true">⌁</div>
+                <p>Project cover</p>
+              </div>
+              <div class="pGlow" aria-hidden="true"></div>
+            </div>
+            <div class="pBody">
+              <div class="pTop">
+                <h3>Kiran Enterprises Management System</h3>
+                <span class="pill">Business System</span>
+              </div>
+              <p>Managed development of an electronics and wire inventory system.
+
+• Problem: Manual stock tracking caused inefficiencies  
+• Action: Coordinated requirements and development workflow  
+• Result: Improved inventory tracking and reduced errors  </p>
+              <div class="pMeta">
+                <span class="tag">Inventory</span>
+                <span class="tag">Coordination</span>
+                <span class="tag">Workflow</span>
+              </div>
+              <button class="pBtn" data-open="modal" data-title="Agency One-Pager">
+                View Details <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="emptyState" id="emptyState" hidden>
+          <div class="emptyIcon" aria-hidden="true">🗂️</div>
+          <strong>No matching projects</strong>
+          <p>Try a different keyword or switch the filter.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="sectionHead reveal">
+          <h2>What People Say</h2>
+          <p>Feedback from clients and teams on coordination, communication, and delivery.</p>
+        </div>
+
+        <div class="tGrid">
+          <article class="tCard reveal lift">
+            <p>
+              “Strong coordination and clear communication throughout the project.
+All tasks were tracked properly and delivery was on time.”
+            </p>
+            <div class="tFoot">
+              <div class="avatar" aria-hidden="true">N</div>
+              <div>
+                <strong>Ajay Sharma</strong>
+                <span>Client</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="tCard reveal lift">
+            <p>
+              “Handled project requirements very efficiently and kept everyone aligned.
+Great support in Agile workflow and sprint coordination.”
+            </p>
+            <div class="tFoot">
+              <div class="avatar" aria-hidden="true">R</div>
+              <div>
+                <strong>Surbhi</strong>
+                <span>Team Lead</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="tCard reveal lift">
+            <p>
+              “Timely updates, proper follow-ups, and smooth execution.
+The project was delivered without confusion or delays.”
+            </p>
+            <div class="tFoot">
+              <div class="avatar" aria-hidden="true">S</div>
+              <div>
+                <strong>Mukund</strong>
+                <span>Project Stakeholder</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container aboutGrid">
+        <div class="aboutLeft reveal">
+          <div class="sectionHead">
+            <h2>About</h2>
+            <p>
+              I am a Project Coordinator with experience in managing web and service-based projects.
+
+I specialize in coordinating teams, tracking progress, and ensuring timely delivery using Agile practices. I focus on clear communication, structured workflows, and efficient execution.
+
+I aim to bridge the gap between clients and teams to deliver successful and well-managed projects.
+            </p>
+          </div>
+
+          <div class="aboutPoints">
+            <div class="point lift">
+              <strong>Structured Workflow</strong>
+              <span>Clear task breakdown, planning, and execution of projects.</span>
+            </div>
+            <div class="point lift">
+              <strong>Effective Communication</strong>
+              <span>Timely updates, coordination, and stakeholder alignment.</span>
+            </div>
+            <div class="point lift">
+              <strong>Delivery Focus</strong>
+              <span>Ensuring projects are completed on time with quality outcomes.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="aboutRight reveal">
+          <div class="mediaFrame ratio ratioAbout">
+            <img
+              src="https://freerangestock.com/sample/160652/business-team-discussing-at-whiteboard-in-office.jpg"
+              alt="Code on screen"
+              loading="lazy"
+              onerror="this.closest('.mediaFrame').classList.add('isMissing')"
+            />
+            <div class="mediaFallback">
+              <div class="fallbackIcon" aria-hidden="true">⌁</div>
+              <p>About image</p>
+            </div>
+          </div>
+
+          <div class="skillBars">
+            <div class="skill">
+              <div class="skillRow">
+                <strong>Project Coordination</strong><span>90%</span>
+              </div>
+              <div class="bar"><span style="width:90%"></span></div>
+            </div>
+
+            <div class="skill">
+              <div class="skillRow">
+                <strong>Agile & Scrum</strong><span>85%</span>
+              </div>
+              <div class="bar"><span style="width:85%"></span></div>
+            </div>
+
+            <div class="skill">
+              <div class="skillRow">
+                <strong>Jira & Tools</strong><span>80%</span>
+              </div>
+              <div class="bar"><span style="width:80%"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline section -->
+    <section class="timeline">
+
+  <div class="timeline-line"></div>
+
+
+
+
+  <div class="timeline-item">
+  <div class="timeline-icon">🚀</div>
+  <div class="timeline-content">
+    <h3>Career Foundation Begins</h3>
+    <span class="date">📅 2021</span>
+    <p>Started my professional journey by building foundational skills in communication, teamwork, and understanding business workflows.</p>
+  </div>
+</div>
+
+<div class="timeline-item">
+  <div class="timeline-icon">💻</div>
+  <div class="timeline-content">
+    <h3>Freelance Journey Begins</h3>
+    <span class="date">📅 2022</span>
+    <p>Started freelance Project Coordination during graduation, working on real client projects and gaining hands-on experience.</p>
+  </div>
+</div>
+
+<div class="timeline-item">
+  <div class="timeline-icon">📈</div>
+  <div class="timeline-content">
+    <h3>Managing Multiple Client Projects</h3>
+    <span class="date">📅 2023 – 2024</span>
+    <p>Coordinated 8+ web development projects, handling requirement gathering, client communication, and task tracking.</p>
+  </div>
+</div>
+
+<div class="timeline-item">
+  <div class="timeline-icon">🧠</div>
+  <div class="timeline-content">
+    <h3>Building Strong Coordination Skills</h3>
+    <span class="date">📅 2024</span>
+    <p>Strengthened expertise in timeline management, stakeholder communication, and efficient project execution.</p>
+  </div>
+</div>
+
+<div class="timeline-item">
+  <div class="timeline-icon">🤖</div>
+  <div class="timeline-content">
+    <h3>Expanding into Technical & AI Projects</h3>
+    <span class="date">📅 2025</span>
+    <p>Developed an AI-based Documentation Generator to automate workflows and improve project efficiency.</p>
+  </div>
+</div>
+
+<div class="timeline-item">
+  <div class="timeline-icon">🏢</div>
+  <div class="timeline-content">
+    <h3>Professional Internship Experience</h3>
+    <span class="date">📅 2026</span>
+    <p>Working as a Project Management Intern at TECHCOOPERS, gaining hands-on experience in Agile, Scrum, and Jira.</p>
+  </div>
+</div>
+
+<div class="timeline-item">
+  <div class="timeline-icon">🎯</div>
+  <div class="timeline-content">
+    <h3>Future Career Goal</h3>
+    <span class="date">📅 2026 (Goal)</span>
+    <p>Aiming to secure a full-time role in Project Management / Scrum or transition into SAP PS for enterprise-level projects.</p>
+  </div>
+</div>
+</section>
+
+
+
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container contactGrid">
+        <div class="contactLeft reveal">
+          <div class="sectionHead">
+            <h2>Contact</h2>
+            <p>
+              Share your requirements and timeline. I’ll reply with a simple plan and estimate.
+            </p>
+          </div>
+
+          <div class="infoCards">
+            <div class="infoCard lift">
+              <strong>Email</strong>
+              <span>smalakarsws@email.com</span>
+            </div>
+            <div class="infoCard lift">
+              <strong>Location</strong>
+              <span>Indore MP</span>
+            </div>
+            <div class="infoCard lift">
+              <strong>Typical response</strong>
+              <span>+91 810-394-8997</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contactRight reveal">
+          <form class="form" id="contactForm">
+            <div class="row">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="you@email.com" required />
+              </label>
+              
+            </div>
+            <label>
+                <span>Project Role</span>
+                <input type="text" name="name" placeholder="Role name" required />
+              </label>
+
+            
+
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" placeholder="Tell me Company name and what you want to Manager " required></textarea>
+            </label>
+
+            <button class="btn btnPrimary btnBig" type="submit">
+              Send Message <span aria-hidden="true">→</span>
+            </button>
+
+            <p class="formNote" id="formNote" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footerRow">
+        <p>© <span id="year"></span> Siddhant Developer. All rights reserved.</p>
+        <div class="footerLinks">
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal (hidden by default) -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Project details">
+    <div class="modalOverlay" data-close="modal"></div>
+
+    <div class="modalCard" role="document">
+      <button class="modalClose" data-close="modal" aria-label="Close">×</button>
+      <h3 id="modalTitle">Project</h3>
+      <p class="modalText">
+        This is a quick preview area. You can replace this text with your real project info.
+      </p>
+
+      <div class="modalActions">
+        <a class="btn btnGhost" href="#contact" data-close="modal">Discuss This</a>
+        <button class="btn btnPrimary" data-close="modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Go Top Button (shows after 100px scroll) -->
+  <button class="goTop" id="goTop" aria-label="Go to top">
+    <span aria-hidden="true">↑</span>
+  </button>
+</div>
+
+<style>
+  .floating-icons {
+  position: fixed;
+  right: 20px;
+  bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+
+.floating-icons a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+/* LinkedIn */
+.linkedin {
+  background: #0077b5;
+}
+
+/* WhatsApp */
+.whatsapp {
+  background: #25D366;
+}
+
+/* Hover Effect */
+.floating-icons a:hover {
+  transform: scale(1.1);
+}
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Apply animation */
+.floating-icons a {
+  animation: floatUpDown 2s ease-in-out infinite;
+}
+</style>
+<!-- floting icon -->
+<div class="floating-icons">
+  
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/in/siddhant-malakar" target="_blank" class="linkedin">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/918103948997" target="_blank" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+</div>
+
+
+<script>
+    /*
+  Siddhant Developer One-Page
+  Beginner notes:
+  - "Go Top" button appears after 100px scroll.
+  - Scroll reveal uses IntersectionObserver (efficient for animations).
+  - Project filter + search updates cards without reloading.
+  - Modal opens from project card buttons.
+*/
+
+(function () {
+  const goTop = document.getElementById("goTop");
+  const yearEl = document.getElementById("year");
+  const navLinksWrap = document.getElementById("navLinks");
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = Array.from(document.querySelectorAll(".navLink"));
+
+  const filterButtons = Array.from(document.querySelectorAll(".segBtn"));
+  const projectSearch = document.getElementById("projectSearch");
+  const projectsGrid = document.getElementById("projectsGrid");
+  const projectCards = Array.from(document.querySelectorAll(".pCard"));
+  const emptyState = document.getElementById("emptyState");
+
+  const modal = document.getElementById("modal");
+  const modalTitle = document.getElementById("modalTitle");
+
+  const contactForm = document.getElementById("contactForm");
+  const formNote = document.getElementById("formNote");
+
+  // Set year in footer
+  yearEl.textContent = new Date().getFullYear();
+
+  // ===== Go Top button visibility (show after 100px scroll) =====
+  function handleScroll() {
+    const y = window.scrollY || document.documentElement.scrollTop;
+    if (y > 100) goTop.classList.add("isVisible");
+    else goTop.classList.remove("isVisible");
+  }
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
+
+  goTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // ===== Mobile nav =====
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinksWrap.classList.toggle("isOpen");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  // Close mobile nav when clicking a link
+  navLinks.forEach((a) => {
+    a.addEventListener("click", () => {
+      navLinksWrap.classList.remove("isOpen");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  // Close mobile nav if clicked outside
+  document.addEventListener("click", (e) => {
+    const target = e.target;
+    const clickedInsideNav = target.closest && target.closest(".nav");
+    if (!clickedInsideNav) {
+      navLinksWrap.classList.remove("isOpen");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  // ===== Scroll reveal (IntersectionObserver) =====
+  const revealEls = Array.from(document.querySelectorAll(".reveal"));
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("isIn");
+          io.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+  revealEls.forEach((el) => io.observe(el));
+
+  // ===== Active nav link while scrolling =====
+  const sections = navLinks
+    .map((a) => document.querySelector(a.getAttribute("href")))
+    .filter(Boolean);
+
+  const spy = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const id = entry.target.getAttribute("id");
+        navLinks.forEach((a) => {
+          const isMatch = a.getAttribute("href") === "#" + id;
+          a.classList.toggle("isActive", isMatch);
+        });
+      });
+    },
+    // rootMargin moves the "active" detection point a bit upward
+    { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+  );
+
+  sections.forEach((sec) => spy.observe(sec));
+
+  // ===== Projects: filter + search =====
+  let currentFilter = "all";
+
+  function setFilter(btn) {
+    filterButtons.forEach((b) => {
+      const on = b === btn;
+      b.classList.toggle("isOn", on);
+      b.setAttribute("aria-selected", on ? "true" : "false");
+    });
+    currentFilter = btn.dataset.filter;
+    applyProjects();
+  }
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", () => setFilter(btn));
+  });
+
+  function normalize(str) {
+    return String(str || "").toLowerCase().trim();
+  }
+
+  function applyProjects() {
+    const q = normalize(projectSearch.value);
+    let visibleCount = 0;
+
+    projectCards.forEach((card) => {
+      const type = card.getAttribute("data-type");
+      const tags = normalize(card.getAttribute("data-tags"));
+      const title = normalize(card.querySelector("h3")?.textContent);
+
+      const matchesFilter = currentFilter === "all" ? true : type === currentFilter;
+      const matchesSearch = !q ? true : title.includes(q) || tags.includes(q);
+
+      const show = matchesFilter && matchesSearch;
+      card.style.display = show ? "" : "none";
+      if (show) visibleCount += 1;
+    });
+
+    emptyState.hidden = visibleCount !== 0;
+  }
+
+  projectSearch.addEventListener("input", applyProjects);
+  applyProjects();
+
+  // ===== Modal open/close =====
+  function openModal(title) {
+    modalTitle.textContent = title || "Project";
+    modal.classList.add("isOpen");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    modal.classList.remove("isOpen");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  // Open modal from project buttons
+  document.addEventListener("click", (e) => {
+    const openBtn = e.target.closest && e.target.closest('[data-open="modal"]');
+    if (openBtn) {
+      const title = openBtn.getAttribute("data-title") || "Project";
+      openModal(title);
+      return;
+    }
+
+    const closeBtn = e.target.closest && e.target.closest('[data-close="modal"]');
+    if (closeBtn) {
+      closeModal();
+      return;
+    }
+  });
+
+  // Close modal with ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("isOpen")) closeModal();
+  });
+
+  // ===== Contact form (demo behavior) =====
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // Quick, friendly feedback. You can wire this to a backend later.
+    const data = new FormData(contactForm);
+    const name = (data.get("name") || "").toString().trim();
+
+    formNote.textContent = "Thanks" + (name ? `, ${name}` : "") + " — message noted. I’ll reply soon.";
+    contactForm.reset();
+
+    // Small micro-interaction: shake highlight
+    formNote.animate(
+      [
+        { transform: "translateX(0px)", opacity: 0.6 },
+        { transform: "translateX(-6px)", opacity: 1 },
+        { transform: "translateX(6px)", opacity: 1 },
+        { transform: "translateX(0px)", opacity: 1 }
+      ],
+      { duration: 420, easing: "cubic-bezier(.2,.8,.2,1)" }
+    );
+  });
+})();
+
+
+
+      //  Timeline section 
+      const items = document.querySelectorAll(".timeline-item");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  { threshold: 0.3 }
+);
+
+items.forEach((item) => observer.observe(item));
+
+
+// certification 
+
+function openModal(certId) {
+  const modal = document.getElementById("certModal");
+  const modalImg = document.getElementById("modalImg");
+
+  // Replace with your real certificate images
+  if(certId === "cert1") {
+    modalImg.src = "https://cdn.dribbble.com/userupload/47162026/file/e6bfd8e42570a7e51a1ec810082ef68e.jpg?resize=1504x1162&vertical=center";
+  }
+  if(certId === "cert2") {
+    modalImg.src = "https://cdn.dribbble.com/userupload/47162080/file/0d10547b2ccbc8daed9221280ec54806.jpg?resize=1504x1162&vertical=center";
+  }
+  if(certId === "cert3") {
+    modalImg.src = "https://cdn.dribbble.com/userupload/47162086/file/fe926ec6e03a758019f25ed4cd22bd18.jpg?resize=1600x1236&vertical=center";
+  }
+  if(certId === "cert4") {
+    modalImg.src = "https://cdn.dribbble.com/userupload/47162070/file/07dccfb99fcbfb524dcf49aa7bb1b9b7.jpg?resize=1504x1162&vertical=center";
+  }
+  if(certId === "cert5") {
+    modalImg.src = "https://cdn.dribbble.com/userupload/47162092/file/7306c52ec8ceaff5a71422ec463154db.jpg?resize=1504x1162&vertical=center";
+  }
+  if(certId === "cert6") {
+    modalImg.src = "https://cdn.dribbble.com/userupload/47165757/file/57beb694e2ae0a514eb896c2502cf1b8.png?resize=400x306&vertical=center";
+  }if (certId === "resume") {
+  modalImg.src = "https://cdn.dribbble.com/userupload/47168699/file/acc5b654371515e6326fb39915f92eff.jpg?resize=850x1100&vertical=center";
+}
+
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("certModal").style.display = "none";
+}
+
+// Close on outside click
+window.onclick = function(event) {
+  const modal = document.getElementById("certModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+</script>
+
+
+
+
+    </body>
+</html>
